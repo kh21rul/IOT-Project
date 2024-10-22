@@ -14,12 +14,12 @@ void setup() {
 
 void loop() {
   // Menghidupkan relay 1 dan mematikan relay 2
-  digitalWrite(relayPin1, HIGH);
-  digitalWrite(relayPin2, LOW);
-  delay(1000); // Waktu tunggu 1 detik
-
-  // Menghidupkan relay 2 dan mematikan relay 1
   digitalWrite(relayPin1, LOW);
   digitalWrite(relayPin2, HIGH);
   delay(1000); // Waktu tunggu 1 detik
+
+  // Menghidupkan relay 2 dan mematikan relay 1
+  digitalWrite(relayPin1, HIGH);
+  digitalWrite(relayPin2, LOW);
+  delay(3000); // Waktu tunggu 1 detik
 }

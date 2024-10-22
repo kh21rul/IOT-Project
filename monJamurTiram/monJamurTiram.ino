@@ -14,7 +14,7 @@ const char* ssid = "POCCO";
 const char* password = "kipasangin1234";
 
 // alamat ip server
-const char* server = "192.168.100.28";
+const char* server = "monjatir.cloud";
  
 void setup() {
   Serial.begin(9600); 
@@ -83,12 +83,12 @@ void loop() {
   // Proses pengiriman data
   String url;
   HTTPClient http; // protokol http
-  url = "http://" + String(server) + "/mushroom-monitoring-web/public/simpan/" + String(t) + "/" + String(h) + "/" + kipas + "/" + atomizer;
+  url = "http://" + String(server) + "/simpan/" + String(t) + "/" + String(h) + "/" + kipas + "/" + atomizer;
 
   // Eksekusi url
   http.begin(wClient, url);
   http.GET();
   http.end();
 
-  delay(2000); //Collecting period should be : >1.7 second
+  delay(5000); //Collecting period should be : >1.7 second
 }
